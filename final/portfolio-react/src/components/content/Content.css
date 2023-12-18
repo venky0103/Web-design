@@ -1,0 +1,32 @@
+:root {
+    --main-bg-color: #d4d4d4;
+    --text-color: #333;
+}
+
+.dark {
+    --main-bg-color: #000000;
+    --text-color: #fff;
+}
+
+.content {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    padding: 0.8rem;
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+
+@media (max-width: 50rem) {
+    .content {
+        background-color: var(--main-bg-color);
+        color: var(--text-color);
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+        
+        justify-content: space-evenly;
+    }
+}

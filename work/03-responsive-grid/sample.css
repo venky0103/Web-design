@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html body{
+    background-color: papayawhip;
+}
+
+    #root {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "menu main"
+    "footer footer"
+    ;
+    grid-template-columns: auto 1fr;
+} 
+
+
+.cats{
+    height: 4.5rem;
+    width: 5em;
+    border-radius: 100%;
+
+}
+
+
+.header{
+    grid-area: header;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+   
+}
+
+
+.header li{ 
+    margin-right: 0.5rem;
+}
+    
+.header li a {
+    text-decoration: none;
+}
+
+.main {
+    text-align: center;
+    background-color: papayawhip;
+    padding: 1rem;   
+}
+
+h2.main__title{
+    margin-bottom: 2rem;
+}
+
+
+.cards{
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.7rem;
+
+}
+
+
+.card {
+    grid-column: span 4;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 2rem 4rem 0 rgba(0,0,0,0.2);
+    border: 0.1rem solid black;
+    border-radius: 0.5rem; 
+    padding: 0.5rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+
+
+.card_link{
+    display: inline-block;
+    border: 0.3rem solid black;
+    background-color: tomato;
+    color: white;
+    margin-top: auto;
+    box-shadow: 1rem 2rem 3rem 1rem rgba(228, 156, 156, 0.2);
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    
+}
+
+
+
+footer{
+    grid-area: footer;
+    background-color: burlywood;
+    padding: 1rem;
+   
+} 
+
+
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer li a {
+    text-decoration: none;
+}
+
+
+li{
+    display: inline;   
+}
+
+
+
+@media screen and (max-width: 50rem) {
+    li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        grid-column: span 12;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        box-shadow: 0 2rem 4rem 0 rgba(0,0,0,0.2);
+        border: 0.1rem solid black;
+        border-radius: 0.5rem; 
+    }
+    .footer-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+  }

@@ -1,0 +1,20 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;  
+}
+
+.content__box {
+    grid-column: span 12;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.63);
+    padding: 11px;
+}
+
+.button__desc {
+    background-color: rgba(255, 255, 255, 0.63);
+    border: 1px solid black;
+    padding: 11px;
+    width: max-content;
+}

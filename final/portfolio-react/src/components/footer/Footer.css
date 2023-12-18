@@ -1,0 +1,35 @@
+footer {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    padding: 0.3rem;
+}
+
+:root {
+    --main-bg-color: #f0f0f0;
+    --text-color: #333;
+}
+
+.dark {
+    --main-bg-color: #333;
+    --text-color: #fff;
+}
+
+
+.footer-icon {
+    color: #f0f0f0;
+    font-size: 2.5rem;
+}
+
+.icon-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    list-style-type: none;
+}

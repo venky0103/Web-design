@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    background-color: papayawhip;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    background-color: burlywood;
+    border: solid black 2px;
+    align-items: center;
+    min-height: 10vh;
+}
+
+
+.header__logo {
+    grid-column: span 3; 
+}
+
+.cats {
+    width: 100px;
+    height: 100px;
+}
+
+
+.skip-to-main-content-link { 
+    padding: 10px;
+    opacity: 0; 
+  }
+
+  .skip-to-main-content-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+
+
+
+.header--title {
+    margin-top: 20px;
+    grid-column: span 7;
+}
+
+
+.menu {
+    grid-column: span 12;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;   
+} 
+
+.menu-icon {
+    display: none;
+}
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    height: 400px;
+    /* overflow: 1000px; */
+  }
+
+
+.home-card1 {
+    flex-direction: row;
+    margin-bottom: 1rem;
+    
+    border: 0.1rem solid black;
+    padding: 0.5rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.card_title {
+    text-align: center;
+}
+
+.cat1{
+    margin-left: 10px; 
+    float: right;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+.home-card2 {  
+    flex-direction: row;
+    border: 0.1rem solid black;
+    padding: 0.4rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.cat2{
+    margin-left: 10px; 
+    float: left;
+    margin-bottom: 20px;
+}
+
+
+
+  
+.fam-cards{
+    display: grid;
+    color: black;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.7rem;
+    background-color: antiquewhite;
+}
+
+.fam-card {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2rem 4rem 0 rgba(0,0,0,0.2);
+    border: 0.1rem solid black;
+    border-radius: 0.5rem; 
+    padding: 0.5rem;
+}
+
+.fam-card  {
+    list-style-type: none;
+} 
+
+ 
+
+  
+  
+.main p {
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: burlywood;
+    padding: 1rem;
+    margin-top: auto;
+}
+.footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;   
+}
+
+
+
+.footer a {
+   display: flex;
+   flex-direction: row;
+}
+
+
+
+#openModalBtn{
+  cursor: pointer;
+  color: blue;
+  background-color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  padding: 1rem;
+  border: 0.3rem solid black;
+  background-color: #fff;
+  color: black; 
+  width: 50%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+
+.subscribe-link {
+    background: none; 
+    border: none;
+    color: #007bff;
+    text-decoration: underline; 
+    cursor: pointer; 
+  }
+
+form#modal-form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+}
+
+.modal-form label{
+  margin-top: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.error{
+    color: red;
+}
+
+
+.subscribe-button {
+    background-color: hsl(120, 83%, 75%);
+    color: #fff; 
+    padding: 1rem 2rem; 
+    border: none;
+    border-radius: 2rem; 
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+  
+ 
+  .cancel-button {
+    background-color: #ec5b5b;
+    color: #fff;
+    padding: 1rem 2rem; 
+    border: none;
+    border-radius: 2rem; 
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+  
+ 
+  .subscribe-button:hover,
+  .cancel-button:hover {
+    opacity: 0.8;
+  }
+  
+.modal-buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
+.error-message {
+  color: red;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+
+
+@media (max-width: 44rem) {
+
+
+    .header ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: row-reverse;
+    }
+
+    .menu.active{
+        display: block;
+        float: right;
+        flex-direction: row-reverse;
+        padding: 1rem;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .menu-items{
+        float: right;
+        position: relative;
+        
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+   
+    .menu-icon {
+        display: block; 
+        float: right;
+        padding: 1rem;
+        font-size: 30px;
+    }
+    
+
+
+    .home-card1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-card2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .fam-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fam-card {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    form#modal-form{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+      }
+
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    ul.footer-list {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}

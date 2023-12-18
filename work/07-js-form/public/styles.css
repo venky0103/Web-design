@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+}
+
+.header img {
+    width: auto;
+    height: 50px;
+}
+
+.header ul {
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.header li {
+    padding: 1rem;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+ #wants-spam{
+   margin-bottom: 20px;
+       
+} 
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.test {
+    display: grid;
+    text-align: center;
+    /* grid-gap: 15px;  */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.main form {
+    /* display: grid;
+    grid-gap: 5px; */
+
+    margin: auto;
+    padding: 10px;
+
+    border: solid;
+    /* grid-gap: 8px; */
+   
+    background-color: gray;
+    /* grid-auto-rows: minmax(0, 1fr);  */
+}
+
+.error {
+    color: red;
+    /* left: 20%; */
+   
+    /* grid-column: span 2;
+    grid-row: auto;  */
+}
+
+
+.error.shown {
+    visibility: visible;
+    /* max-height: 100px; 
+    grid-row: auto;  */
+}
+
+.form #tier{
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+
+
+.required-asterisk {
+    color: #ff0000;
+}
+
+
+label{
+
+    color: white;
+}
+
+form button {
+    grid-column: span 2;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  
+    
+}
+
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    color: white;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+
+    .header ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .main form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .test{
+        display: grid;
+    text-align: center;
+    
+    grid-template-columns: repeat(1, 1fr)
+    }
+
+ 
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+}

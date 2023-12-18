@@ -1,0 +1,25 @@
+.portfolio {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.panel-title {
+    font-size: 2rem;
+}
+
+.timeline {
+    font-size: 1.3rem;
+}
+
+.description {
+    text-align: center;
+}
+
+
+
+@media (max-width: 44rem) {
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+    }
+}

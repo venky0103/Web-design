@@ -1,0 +1,58 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+body {
+  background-color: rgb(246, 241, 241);
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+  align-content: center;
+}
+
+.card {
+  display: flex;
+}
+
+.button{
+  gap: 0.5rem;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  display: flex;
+}
+
+.read-the-docs {
+  color: #888;
+}

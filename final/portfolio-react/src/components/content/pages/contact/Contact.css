@@ -1,0 +1,62 @@
+.contact {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-area {
+    text-align: center;
+}
+
+.icons {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.text-icon {
+    font-size: 1.5rem;
+}
+
+
+.modalbutton {
+    position: absolute;
+    color: black;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: block;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: #999;
+}
+
+.modal-button:disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.modal-button:active,
+.modal-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 44rem) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-area {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+}

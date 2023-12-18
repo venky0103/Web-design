@@ -1,0 +1,30 @@
+.about {
+  text-align: left;
+  padding: 1.3rem;
+  border: 2px solid #fff;
+  border-radius: 0.8rem;
+  width: 70%;
+  margin: auto;
+  background-color: gray;
+}
+
+
+
+.my-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.card__title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+@media (max-width: 44rem) {
+  .about {
+    width: auto;
+  }
+}

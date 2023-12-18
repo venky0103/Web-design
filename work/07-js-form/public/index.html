@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="https://i0.wp.com/sunburn.in/wp-content/uploads/2020/12/sunburn-main-w-3.png?fit=500%2C113&ssl=1"class="logo"/>
+        
+        <ul>
+            <li class="header-Home"> <a href="#" class="header__link">Home</a></li>
+            <li class="header-Menu"> <a href="#" class="header__link">Menu</a></li>
+            <li class="header-Contact_Us"> <a href="#" class="header__link">ContactUs</a></li>
+        </ul>
+
+    </header>
+    <main class="main">
+        <form id="form" action="/register" method="POST" class="form">
+        
+            <div class="test">
+            <label for="name">Name: <span class="required-asterisk">*</span></label>
+            <input class="name" type="text" id="name" name="name">
+            <small class="error" id="name-error" style="visibility: hidden;">Name is required</small>
+        </div>
+            
+
+            <div class="test">
+            <label for="email">Email: <span class="required-asterisk">*</span></label>
+            <input class="email" type="text" id="email" name="email">
+            <small class="error" id="email-error" style="visibility: hidden;">Email is required</small>
+        </div>
+
+
+        <div class="test">
+            <label for="confirm-email">Confirm Email: <span class="required-asterisk">*</span></label>
+            <input class="email2" type="text" id="email2" name="email2">
+             <small class="error" id="confirm-email-error2" style="visibility: hidden;">Confirm Email must match Email</small>
+        </div>
+        
+        
+            <div class="test">
+             <label>Do you want to receive spam mails?</label>
+                <input type="checkbox" id="wants-spam" name="wants-spam">
+            </div>
+
+            <div class="test">
+            <label for="tier">Select Tier: <span class="required-asterisk">*</span></label>
+            <select id="tier" name="tier">
+                <option value="Please-Select">Please Select</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+            </select>
+            <small class="error" id="tier-error" style="visibility: hidden;">Tier must be selected</small>
+            </div>
+
+            <button type="submit" class="button">Register</button>
+            <p>Note: <span class="required-asterisk">* </span>Denotes required field</p>
+        </form>
+    </main>
+   
+    <footer class="footer">
+        
+            
+            <a href="#">© 2023 Your Website</a> 
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+             
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

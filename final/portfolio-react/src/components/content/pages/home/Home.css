@@ -1,0 +1,34 @@
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+}
+
+.home-title {
+  text-align: left;
+  margin-bottom: 1.3rem;
+}
+
+.profile-pic {
+  width: 12.5rem;
+  height: auto;
+}
+
+
+@media (max-width: 44rem) {
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+
+
+  .profile-pic {
+    width: 9.3rem;
+
+  }
+}

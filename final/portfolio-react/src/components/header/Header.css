@@ -1,0 +1,175 @@
+:root {
+    --main-bg-color: #f0f0f0;
+    --text-color: #333;
+}
+
+.dark {
+    --main-bg-color: #333;
+    --text-color: #fff;
+}
+
+header {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    padding-left: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 0.5fr;
+    max-height: 5rem;
+}
+
+.logo-text {
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.skip-to-main-content-link {
+    padding: 0.8rem;
+    opacity: 0;
+}
+
+.skip-to-main-content-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu-list__hidden {
+    display: flex;
+}
+
+.menu-button {
+    display: none;
+}
+
+li {
+
+    text-decoration: none;
+}
+
+.underline-link {
+    display: inline-block;
+    padding: 0.8rem 1.3rem;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.underline-link:hover {
+    color: rgb(255, 204, 0);
+}
+
+.underline-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgb(255, 204, 0);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.toggle {
+    height: 3.2rem;
+    width: 3.2rem;
+
+}
+
+
+
+
+
+
+@media (max-width: 44rem) {
+
+
+
+    li {
+        background-color: gray;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+
+
+
+    .menu-list.menu-list__hidden {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-list {
+        display: block;
+        position: absolute;
+        background-color: #171717;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-top: 0;
+        top: 60%;
+        left: 55%;
+        transform: translateX(-50%);
+        width: max-content;
+        border-radius: 0.3rem;
+    }
+
+
+    .menu-button {
+        position: absolute;
+        color: black;
+        padding: 1rem 2rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.3rem;
+        display: block;
+        width: fit-content;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-button:hover {
+        background-color: #999;
+    }
+
+    .menu-button:disabled {
+        background-color: #ccc;
+        color: #999;
+        cursor: not-allowed;
+    }
+
+    .menu-button:active,
+    .menu-button:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .toggle {
+        margin-left: 1rem;
+
+    }
+
+}

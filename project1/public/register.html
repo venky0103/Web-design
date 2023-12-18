@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-o.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        
+        <header class="header">
+            <a href="index.html">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/labrador-puppy-royalty-free-image-1626252338.jpg?crop=0.667xw:1.00xh;0.173xw,0&resize=2048:*" class="dogs" alt="Homepage"/>
+            </a>
+            <h2>Register</h2>
+            <nav>
+                <ul class="header-ul">
+                    <li class="menu"><i class="gg-menu-grid-o"></i>Menu
+                    <ul class="menu__item"><a class="menu__item__link">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="about.html">About Dogs</a></li>
+                    </a>
+                    </ul>
+                </ul>   
+            </nav>
+      </header>
+    </div>
+
+    <main class="main">
+
+        <form action="/register" method="POST">
+        
+            
+            <label for="name">Name:<span class="red-asterisk"> *</span></label>
+            <input class="classlayout" type="text" id="name" name="name" required>
+            
+
+            
+
+            
+            <label for="email">Email:<span class="red-asterisk"> *</span></label>
+            <input class="classlayout" type="email" id="email" name="email" required>
+            
+        
+        
+        
+            <label for="more_info">Do you want to know more about dogs?</label>
+                <input type="checkbox" id="more_info" name="more_info">
+            
+               
+            
+
+            <label for="breed">Select a Dog:<span class="red-asterisk"> *</span></label>
+            <select id="breed" name="breed">
+                
+        
+                <option value="Please-Select">Please Select</option>
+                <option value="Labrador Retriever">Labrador Retriever</option>
+                <option value="German Shepherd">German Shepherd</option>
+                <option value="Husky">Husky</option>
+                <option value="Other Dogs">Other Dogs</option>
+            </select>
+
+            <input type="text" name="other_value" id="other_value" style="display: none;">
+
+    
+            <button type="submit">Register</button>
+            <p>Note:<span class="red-asterisk"> *</span> Required Field</p>
+        </form>
+    </main>
+
+   
+    
+    <footer class="footer">
+        
+            
+            <a href="#">© 2023 Your Website</a> 
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+       
+        
+    </footer>
+
+</body>
+</html>
